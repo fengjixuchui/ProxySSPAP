@@ -1,0 +1,4 @@
+LIBRARY ProxySSPAP
+
+EXPORTS
+	SpLsaModeInitialize
