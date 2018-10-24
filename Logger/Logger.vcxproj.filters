@@ -21,30 +21,34 @@
     <ClInclude Include="targetver.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="internals.h">
+    <ClInclude Include="writer.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="package.h">
+    <ClInclude Include="logger.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="writer_factory.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="stdafx.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ProxySPPAP.cpp">
+    <ClCompile Include="logger.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="file_writer.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="memory.cpp">
+    <ClCompile Include="writer_factory.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ProxySSPAP.def">
-      <Filter>Файлы ресурсов</Filter>
-    </None>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

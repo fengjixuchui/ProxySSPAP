@@ -1,0 +1,8 @@
+LIBRARY ProxySSPAP
+
+EXPORTS
+	LsaApInitializePackage
+	LsaApCallPackage
+	LsaApLogonTerminated
+	LsaApLogonUserEx2
+	LsaApLogonTerminated
