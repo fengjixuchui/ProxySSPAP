@@ -44,7 +44,7 @@ VOID LoggerFree(
 /* ------------------- Уровни логирования ------------------- */
 
 /* Логируем сообщение ошибки */
-//#ifdef DEBUG
+#if defined(_DEBUG) && !defined(NO_LOG)
 #define LOG_ERROR(msg, ...) \
 	Log(ERR,  msg, ## __VA_ARGS__)
 
@@ -72,24 +72,24 @@ VOID LoggerFree(
 #define LOG_FUNCTION_CALL()	\
 	LOG_TRACE( L"" __FUNCTIONW__  )
 
-//#else
-//#define LOG_ERROR(msg, ...) \
-//	UNREFERENCED_PARAMETER(msg)
-//#define LOG_WARNING(msg, ...)\
-//	UNREFERENCED_PARAMETER(msg) 
-//#define LOG_INFO(msg, ...)\
-//	UNREFERENCED_PARAMETER(msg)
-//#define LOG_DEBUG(msg, ...) \
-//	UNREFERENCED_PARAMETER(msg)
-//#define LOG_TRACE(msg, ...) \
-//	UNREFERENCED_PARAMETER(msg)
-//#define LOG_DUMP(msg, data, size)	\
-//	UNREFERENCED_PARAMETER(msg);\
-//	UNREFERENCED_PARAMETER(data);\
-//	UNREFERENCED_PARAMETER(size)
-//#define LOG_FUNCTION_CALL()	\
-//	LOG_TRACE( L"" __FUNCTIONW__  )
-//#endif
+#else
+#define LOG_ERROR(msg, ...) \
+	UNREFERENCED_PARAMETER(msg)
+#define LOG_WARNING(msg, ...)\
+	UNREFERENCED_PARAMETER(msg) 
+#define LOG_INFO(msg, ...)\
+	UNREFERENCED_PARAMETER(msg)
+#define LOG_DEBUG(msg, ...) \
+	UNREFERENCED_PARAMETER(msg)
+#define LOG_TRACE(msg, ...) \
+	UNREFERENCED_PARAMETER(msg)
+#define LOG_DUMP(msg, data, size)	\
+	UNREFERENCED_PARAMETER(msg);\
+	UNREFERENCED_PARAMETER(data);\
+	UNREFERENCED_PARAMETER(size)
+#define LOG_FUNCTION_CALL()	\
+	LOG_TRACE( L"" __FUNCTIONW__  )
+#endif
 /* ----------------------------------------------------------- */
 
 EXTERN_C_END

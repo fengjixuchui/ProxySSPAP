@@ -17,7 +17,7 @@ EXTERN_C_START
 #endif
 
 #ifndef ARGUMENT_PRESENT
-#define ARGUMENT_PRESENT(exp)					(((exp) != NULL))
+#define ARGUMENT_PRESENT(exp)					((NULL != (exp)))
 #endif
 
 #ifndef FREE

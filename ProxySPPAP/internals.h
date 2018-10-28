@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include <logger.h>
 #include "package.h"
+#include <stddef.h>
 
 ////////////////////////////////////////////////////////////////
 /////				ОПРЕДЕЛЕНИЕ MACRO					////////
@@ -12,6 +13,7 @@
 /// отсекаем лики выделяя непрерывный блок который будет разом освобожден
 #define HEAP_SIZE 0x1000
 
+#define assert(exp) while(!(exp)) { LOG_TRACE(L"[ASSERT][LINE:%d] %s:%s", __LINE__, __FILE__, __FUNCTIONW__);} 
 /// <summary>
 /// Вызываем LSA функцию из таблицы функций
 /// </summary>
